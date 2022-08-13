@@ -1,6 +1,6 @@
 Ejercicios JavaScript
 
-Ejercicio 1
+Ejercicio 1 // Por resolver
 Un texto en formato CSV tiene el nombre de los campos en la primera fila y los datos en el resto, separados por comas. Crea un parseador que reciba un string en formato CSV y devuelva una colección de objetos. Utiliza destructuring, rest y spread operator donde creas conveniente.
 
 const data = `id,name,surname,gender,email,picture
@@ -58,7 +58,7 @@ console.log(fromCSV(data, 3)); // cada usuario tendrá sólo `id`, `name` y `sur
 console.log(fromCSV(data, 4)); // cada usuario tendrá sólo `id`, `name`, `surname` y `gender`
 
 
-Ejercicio 2
+Ejercicio 2 // Resuelto
 Implementar una funcion replaceAt que tome como primer argumento un array, como segundo argumento un índice y como tercer argumento un valor y reemplace el elemento dentro del array en el índice indicado. El array de entrada no debe de ser mutado, eso es, que debes crear un nuevo array sin modificar el existente. Utiliza spread operator, y slice para conseguirlo.
 
 const elements = ["lorem", "ipsum", "dolor", "sit", "amet"];
@@ -78,7 +78,7 @@ console.log(result === elements); // false
 console.log(result); // ['lorem', 'ipsum', 'furor', 'sit', 'amet'];
 
 
-Ejercicio 3
+Ejercicio 3 // Resuelto
 Crea una función que reciba una colección de objetos y un año. Dicha función deberá de mostrar los nombres de las tres personas con el ranking más alto del año.
 
 const data = [
@@ -141,7 +141,7 @@ console.log(winnerByYear(data, 2003)) // [ 'Brianna', 'Francene', 'Everett' ]
 console.log(winnerByYear(data, 2004)) // []
 
 
-Ejercicio 4
+Ejercicio 4 // Resuelto
 Crear funcion para normalizar una colección de objetos a un objeto, de tal manera que devuelva un objeto que tenga como claves las ids de los objetos y como valores los objetos en sí pero sin la id.
 
 const collection = [
@@ -269,7 +269,7 @@ Resultado:
 */
 Opcional: Si tu solución previa utiliza bucles, crea una versión sin bucles, basándote en los métodos funcionales de Array.prototype.
 
-Ejercicio 5
+Ejercicio 5 // Resuelto
 Implementa una función para eliminar valores falsys de una estructura de datos. Si el argumento es un objeto, deberá eliminar sus propiedades falsys. Si el argumento es un array, deberá eliminar los elementos falsys. Si el argumento es un objeto o un array no deberán ser mutados. Siempre deberá de crear una estructura nueva. Si no es ni un objeto ni un array deberá de devolver dicho argumento.
 
 const elements = [0, 1, false, 2, "", 3];
