@@ -276,6 +276,26 @@ const elements = [0, 1, false, 2, "", 3];
 
 const compact = (arg) => {
 
+  if(Array.isArray(arg)){
+    var filtered = arg.filter(Boolean);
+    return filtered;
+ 
+  }
+  
+  if(Array.isArray(arg)== false && !(arg instanceof Object)){
+    return arg;
+  }
+
+  if(arg instanceof Object){
+    Object.keys(arg).forEach(key => {
+      if (!arg[key]) {
+        delete arg[key];
+      }
+     
+    });
+     return arg;
+  } 
+
 };
 
 console.log(compact(123)); // 123
