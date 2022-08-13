@@ -229,6 +229,20 @@ const collection = [
 
 const normalize = (arr) => {
 
+    const container = {};
+    arr.map(item => {
+   
+    container[item.id] = {};
+    container[item.id].nationality = item.nationality;
+    container[item.id].language = item.language;
+    container[item.id].capital = item.capital;
+    container[item.id].national_sport = item.national_sport;
+    container[item.id].flag = item.flag;
+    
+  })
+  
+  return container;
+
 };
 
 const result = normalize(collection);
