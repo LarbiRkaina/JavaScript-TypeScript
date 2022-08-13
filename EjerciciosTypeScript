@@ -160,6 +160,60 @@ const logUser = (user: User) => {
 Extra: Crea dos funciones isStudent e isTeacher que apliquen la guarda y úsalas en la función logPerson. Aplica tipado completo en la función (argumentos y valor de retorno). Utiliza is.
 
 
+/////////////////////////////////////////////////SOLUCION EJERCICIO 3 ///////////////////////////////////////////////////////////////////////////////////////////
+
+interface Teacher {
+  name: String;
+  age: Number;
+  subject?: String;
+}
+interface Student {
+  name: String,
+  age: Number,
+  occupation?: String
+};
+
+interface User extends Teacher,Student{
+  
+}
+
+const users: User[] = [
+  {
+    name: "Luke Patterson",
+    age: 32,
+    occupation: "Internal auditor",
+  },
+  {
+    name: "Jane Doe",
+    age: 41,
+    subject: "English",
+  },
+  {
+    name: "Alexandra Morton",
+    age: 35,
+    occupation: "Conservation worker",
+  },
+  {
+    name: "Bruce Willis",
+    age: 39,
+    subject: "Biology",
+  },
+];
+
+const logUser = (user: User) => {
+  let extraInfo: String;
+  if (user.occupation) {
+    extraInfo = user.occupation;
+  } else {
+    extraInfo = user.subject;
+  }
+  console.log(`  - ${user.name}, ${user.age}, ${extraInfo}`);
+  
+}
+users.forEach(logUser);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 
 Ejercicio 4
