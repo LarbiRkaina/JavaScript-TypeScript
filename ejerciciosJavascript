@@ -56,6 +56,8 @@ console.log(fromCSV(data)); // Cada usuario tendrá todos los atributos como la 
 console.log(fromCSV(data, 2)); // cada usuario tendrá sólo `id` y `name`
 console.log(fromCSV(data, 3)); // cada usuario tendrá sólo `id`, `name` y `surname`
 console.log(fromCSV(data, 4)); // cada usuario tendrá sólo `id`, `name`, `surname` y `gender`
+
+
 Ejercicio 2
 Implementar una funcion replaceAt que tome como primer argumento un array, como segundo argumento un índice y como tercer argumento un valor y reemplace el elemento dentro del array en el índice indicado. El array de entrada no debe de ser mutado, eso es, que debes crear un nuevo array sin modificar el existente. Utiliza spread operator, y slice para conseguirlo.
 
@@ -65,11 +67,17 @@ const newValue = "furor";
 
 const replaceAt = (arr, index, newElement) => {
 
+  const copiaArray = [...arr];
+  copiaArray.splice(index,1,newElement);
+  return copiaArray;
+
 };
 
 const result = replaceAt(elements, index, newValue);
 console.log(result === elements); // false
 console.log(result); // ['lorem', 'ipsum', 'furor', 'sit', 'amet'];
+
+
 Ejercicio 3
 Crea una función que reciba una colección de objetos y un año. Dicha función deberá de mostrar los nombres de las tres personas con el ranking más alto del año.
 
