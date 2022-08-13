@@ -95,6 +95,54 @@ const logUser = ({ name, age }: Teacher) => {
 
 users.forEach(logUser);
 
+///////////////////////////////////////////////////////SOLUCIÓN EJERCICIO 2/////////////////////////////////////////////////
+
+interface Teacher {
+  name: String;
+  age: Number;
+  subject?: String;
+}
+interface Student {
+  name: String,
+  age: Number,
+  occupation?: String
+};
+
+interface User extends Teacher,Student{
+  
+}
+
+const users: User[] = [
+  {
+    name: "Luke Patterson",
+    age: 32,
+    occupation: "Internal auditor",
+  },
+  {
+    name: "Jane Doe",
+    age: 41,
+    subject: "English",
+  },
+  {
+    name: "Alexandra Morton",
+    age: 35,
+    occupation: "Conservation worker",
+  },
+  {
+    name: "Bruce Willis",
+    age: 39,
+    subject: "Biology",
+  },
+];
+
+const logUser = ({ name, age }: User) => {
+  console.log(`  - ${name}, ${age}`);
+};
+
+users.forEach(logUser);
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 
 Ejercicio 3
