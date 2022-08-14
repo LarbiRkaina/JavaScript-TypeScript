@@ -67,7 +67,7 @@ const newValue = "furor";
 
 const replaceAt = (arr, index, newElement) => {
 
-  const copiaArray = [...arr];
+  let copiaArray = [...arr];
   copiaArray.splice(index,1,newElement);
   return copiaArray;
 
