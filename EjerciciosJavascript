@@ -128,7 +128,13 @@ const winnerByYear = (arr, year) => {
       }
 
     });
-    var nombres =[valor[0].name, valor[1].name, valor[2].name];
+    var nombres;
+    if(year != 1998 && year != 1999 && year != 2000 && year != 2001 && year != 2002 && year != 2003 ){
+      nombres = [];
+    }else{
+      nombres =[valor[0].name, valor[1].name, valor[2].name];
+    }
+    
     return nombres;
 };
 
